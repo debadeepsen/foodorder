@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -13,8 +13,33 @@ import CategoriesScroller from '../elements/CategoriesScroller';
 import DealsBox from '../elements/DealsBox';
 import RestaurantList from '../elements/RestaurantList';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createStackNavigator, HeaderTitle} from '@react-navigation/stack';
+import RestaurantDetails from '../elements/RestaurantDetails';
+import HeaderComp from '../elements/HeaderComp';
+import HeaderRightComp from '../elements/HeaderRightComp';
 
 const HomeScreen = ({navigation}) => {
+  return (
+    <>
+      <HeaderComp />
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+          headerRight: (props) => <HeaderRightComp {...props} />,
+        }}>
+        <Stack.Screen name="HomeMain" component={HomeMain} />
+        <Stack.Screen name="RestaurantDetails" component={RestaurantDetails} />
+      </Stack.Navigator>
+    </>
+  );
+};
+
+export default HomeScreen;
+
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const HomeMain = () => {
   return (
     <ScrollView
       style={{
@@ -28,17 +53,8 @@ const HomeScreen = ({navigation}) => {
         <RestaurantList />
       </View>
     </ScrollView>
-
-    // <Tab.Navigator>
-    //   <Tab.Screen name="Feed" component={Feed} />
-    //   <Tab.Screen name="Messages" component={Messages} />
-    // </Tab.Navigator>
   );
 };
-
-export default HomeScreen;
-
-const Tab = createBottomTabNavigator();
 
 const Feed = () => <Text>Feed</Text>;
 const Messages = () => <Text>Feed</Text>;

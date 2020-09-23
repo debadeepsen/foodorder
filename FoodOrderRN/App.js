@@ -32,7 +32,6 @@ export default function App() {
         backgroundColor={Constants.COLORS.BACKGROUND}
         barStyle="dark-content"
       />
-      <HeaderComp />
       <Drawer.Navigator
         initialRouteName="Home"
         screenOptions={{

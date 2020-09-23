@@ -1,5 +1,6 @@
 import {faStar} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {useNavigation} from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
 import {
   SafeAreaView,
@@ -16,6 +17,7 @@ import {
 import Constants from '../../assets/js/constants';
 
 import Restaurants from '../../assets/json/restaurants';
+import {navigate} from '../../RootNavigation';
 
 const RestaurantList = ({navigation}) => {
   const [restaurants, setRestaurants] = useState([]);
@@ -41,6 +43,8 @@ const RestaurantList = ({navigation}) => {
 };
 
 const RestaurantBox = ({restaurant}) => {
+  const navigation = useNavigation();
+
   //price point
   var range = '';
   for (let i = 0; i < restaurant.price_range; i++) {
@@ -58,8 +62,12 @@ const RestaurantBox = ({restaurant}) => {
   }
 
   return (
-    <View style={{marginBottom: 12, marginTop:4}}>
-      <TouchableOpacity style={{height: 100, flexDirection: 'row'}}>
+    <View style={{marginBottom: 12, marginTop: 4}}>
+      <TouchableOpacity
+        style={{height: 100, flexDirection: 'row'}}
+        onPress={() => {
+          navigation.navigate('RestaurantDetails', {restaurant:restaurant, id:1234});
+        }}>
         <View style={{flex: 1}}>
           <Image
             style={{width: 100, height: 100, borderRadius: 3}}

@@ -14,6 +14,7 @@ export default {
       type: {
         id: 1,
         name: 'Spanish',
+        flag: '🇪🇸'
       },
       menu: [
         {
@@ -22,6 +23,7 @@ export default {
           price: 10,
           image:
             'https://spanishsabores.com/wp-content/uploads/2017/09/Tostada.jpg',
+            description: 'Toasts with tomato. A reminder that a good breakfast can be simple.'
         },
         {
           id: 2,
@@ -29,6 +31,7 @@ export default {
           price: 12,
           image:
             'https://images.pexels.com/photos/4305836/pexels-photo-4305836.jpeg',
+            description: 'Succulent rice cooked with saffron and seafoods.'
         },
         {
           id: 3,
@@ -36,6 +39,7 @@ export default {
           price: 10,
           image:
             'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/panfriedpadronpeppers-600x900.jpg',
+            description: 'Just peppers. Nothing else.'
         },
         {
           id: 4,
@@ -43,6 +47,7 @@ export default {
           price: 22,
           image:
             'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/spanish-pork-kebabs-for-facebook-600x314.jpg',
+            description: 'Delicious grilled pork, the Spanish variety.'
         },
         {
           id: 5,
@@ -50,6 +55,7 @@ export default {
           price: 20,
           image:
             'https://spanishsabores.com/wp-content/uploads/2015/04/IMG_6028.jpg',
+            description: 'A rich, creamy Spanish tomato soup.'
         },
         {
           id: 6,
@@ -57,13 +63,15 @@ export default {
           price: 20,
           image:
             'https://spanishsabores.com/wp-content/uploads/2014/04/IMG_4364.jpg',
+            description: 'A delectable concoction of eggs and meat.'
         },
         {
-          id: 1,
+          id: 7,
           name: 'Empanadas de Tuna',
           price: 20,
           image:
             'https://spanishsabores.com/wp-content/uploads/2015/06/Tuna-Empanada-Recipe-Feature.jpg',
+            description: 'Empanadas with a twist.'
         },
       ],
     },
@@ -81,6 +89,7 @@ export default {
       type: {
         id: 1,
         name: 'Bengali/Indian',
+        flag: '🇮🇳'
       },
       menu: [
         {
@@ -147,6 +156,7 @@ export default {
       type: {
         id: 3,
         name: 'Chinese',
+        flag: '🇨🇳'
       },
       menu: [
         {
@@ -214,6 +224,7 @@ export default {
       type: {
         id: 4,
         name: 'Italian',
+        flag: '🇮🇹'
       },
       menu: [
         {
@@ -281,6 +292,7 @@ export default {
       type: {
         id: 5,
         name: 'Sushi/japanese',
+        flag: '🇯🇵'
       },
       menu: [
         {

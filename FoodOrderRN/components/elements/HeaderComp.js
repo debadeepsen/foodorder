@@ -1,5 +1,6 @@
 import {faBars, faHome} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {
   SafeAreaView,
@@ -15,7 +16,9 @@ import Constants from '../../assets/js/constants';
 import * as RootNavigation from '../../RootNavigation';
 
 const HeaderComp = () => {
-//   const navigation = useNavigation();
+  
+  const navigation = useNavigation();
+
   return (
     <View
       style={{
@@ -46,8 +49,7 @@ const HeaderComp = () => {
         <TouchableOpacity
           onPress={() => {
             console.log('navigation.toggleDrawer();');
-            RootNavigation.navigate('Notifications');
-            // RootNavigation.toggleDrawer();
+            navigation.toggleDrawer();
           }}>
           <FontAwesomeIcon
             icon={faBars}

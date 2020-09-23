@@ -2,7 +2,9 @@ const Constants = {
   COLORS: {
     BACKGROUND: '#fff',
     THEME_MAIN: '#f2661b',
-    THEME_SECONDARY: '#d24900'
+    THEME_SECONDARY: '#d24900',
+    THEME_TERTIARY: '#aa2700',
+    THEME_ALT: '#59ca12'
   },
   STYLE: {
     MTOP: {
