@@ -26,8 +26,30 @@ import Constants from '../../assets/js/constants';
 import Restaurants from '../../assets/json/restaurants';
 
 const RestaurantDetails = ({route, navigation}) => {
-  const {restaurant} = route.params;
+  const {restaurant_id} = route.params;
 
+  const [restaurant, setRestaurant] = useState({});
+  useEffect(() => {
+    // in a real application, this would be done
+    // with an API call
+    var current_restaurant = Restaurants.restaurants.find(
+      (r) => r.id == restaurant_id,
+    );
+    // console.log({current_restaurant});
+    setRestaurant(current_restaurant);
+  }, []);
+
+  console.log('----------');
+  console.log(restaurant);
+  console.log('----------');
+
+  //return <View/>
+  return <RestaurantFlatList restaurant={restaurant} />;
+};
+
+export default RestaurantDetails;
+
+const RestaurantFlatList = ({restaurant}) => {
   //rating
   var activeStars = '',
     inactiveStars = '';
@@ -38,8 +60,9 @@ const RestaurantDetails = ({route, navigation}) => {
     inactiveStars += Constants.STAR_SYMBOL;
   }
 
+  // return <Text>{JSON.stringify(restaurant.type)}</Text>;
+
   return (
-    // <ScrollView>
     <>
       <SafeAreaView
         style={{borderWidth: 1, borderColor: '#4441', elevation: 1}}>
@@ -93,8 +116,8 @@ const RestaurantDetails = ({route, navigation}) => {
                     backgroundColor: '#fff',
                     elevation: 5,
                   }}>
-                  {restaurant.type.flag} &nbsp;
-                  {restaurant.type.name}
+                  {restaurant.type ? restaurant.type.flag : ''} &nbsp;
+                  {restaurant.type ? restaurant.type.name : ''}
                 </Text>
               </View>
 
@@ -137,9 +160,9 @@ const RestaurantDetails = ({route, navigation}) => {
                   />
                   <Text style={{marginLeft: 5}}>{restaurant.phone}</Text>
                 </View>
-                  <View>
-                    <Text style={{fontSize: 20, fontWeight: 'bold'}}>Menu</Text>
-                  </View>
+                <View>
+                  <Text style={{fontSize: 20, fontWeight: 'bold'}}>Menu</Text>
+                </View>
               </View>
             </>
           }
@@ -150,12 +173,9 @@ const RestaurantDetails = ({route, navigation}) => {
           keyExtractor={(item) => item.id.toString()}
         />
       </SafeAreaView>
-      {/* </ScrollView> */}
     </>
   );
 };
-
-export default RestaurantDetails;
 
 const MenuItemBox = ({menuItem}) => {
   return (

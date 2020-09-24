@@ -82,7 +82,7 @@ const RestaurantBox = ({restaurant}) => {
         style={{height: 100, flexDirection: 'row'}}
         onPress={() => {
           navigation.navigate('RestaurantDetails', {
-            restaurant: restaurant,
+            restaurant_id: restaurant.id,
             id: 1234,
           });
         }}>

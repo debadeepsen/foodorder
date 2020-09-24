@@ -1,4 +1,6 @@
 export default {
+  disclaimer:
+    'The content here has been ethically sourced. The restaurants are fictional, but all the dishes and their corresponding descriptions are real, and belong to their respective cuisines. The pictures have been chosen from a set with free licenses.',
   restaurants: [
     {
       id: 1,
@@ -87,7 +89,7 @@ export default {
         value: 6,
         unit: 'km',
       },
-      address: '259B King\'s Row, Justin, CA 98758',
+      address: "259B King's Row, Justin, CA 98758",
       phone: '(408)-404-6174',
       image:
         'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg',
@@ -103,7 +105,7 @@ export default {
           price: 15,
           image:
             'https://cdn.pixabay.com/photo/2019/08/12/09/50/chicken-curry-4400848_960_720.jpg',
-            description: 'A rich tomato-based gravy with juicy chicken pieces.'
+          description: 'A rich tomato-based gravy with juicy chicken pieces.',
         },
         {
           id: 2,
@@ -111,7 +113,8 @@ export default {
           price: 17,
           image:
             'https://upload.wikimedia.org/wikipedia/commons/e/ec/Mustard_Fish_Curry.jpg',
-            description:'A mustard based variety of one of Bengal\'s signature dishes'
+          description:
+            "A mustard based variety of one of Bengal's signature dishes",
         },
         {
           id: 8,
@@ -119,7 +122,8 @@ export default {
           price: 20,
           image:
             'https://uploads-ssl.webflow.com/5c481361c604e53624138c2f/5c5784dd46836abe97e82a07_kosha-mangsho-website-thumbnail-_p4nuue.png',
-            description: 'Pieces of meat seared and braised on low heat until they are tender enough to fall off the bones.'
+          description:
+            'Pieces of meat seared and braised on low heat until they are tender enough to fall off the bones.',
         },
         {
           id: 3,
@@ -127,7 +131,8 @@ export default {
           price: 20,
           image:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Kolkata_Biryani.jpg/1024px-Kolkata_Biryani.jpg',
-            description: 'A slow-cooked casserole of meat and rice. This is a special Bengali variety of the dish considered a delicacy all over India.'
+          description:
+            'A slow-cooked casserole of meat and rice. This is a special Bengali variety of the dish considered a delicacy all over India.',
         },
         {
           id: 4,
@@ -135,7 +140,8 @@ export default {
           price: 22,
           image:
             'https://i1.wp.com/kitchenofdebjani.com/wp-content/uploads/2018/01/Bhetki-Macher-Paturi-3.jpg',
-            description: 'Tender Bhetki fish fillets marinated with spices and steamed in a banana leaf envelope. Healthy with a dash of indulgence.'
+          description:
+            'Tender Bhetki fish fillets marinated with spices and steamed in a banana leaf envelope. Healthy with a dash of indulgence.',
         },
         {
           id: 5,
@@ -143,7 +149,8 @@ export default {
           price: 10,
           image:
             'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg',
-            description: 'A deep fried pastry pocket containing delicious spicy vegetables.'
+          description:
+            'A deep fried pastry pocket containing delicious spicy vegetables.',
         },
         {
           id: 6,
@@ -151,7 +158,8 @@ export default {
           price: 20,
           image:
             'http://i0.wp.com/saffronstreaks.com/wp-content/uploads/2010/04/ss_fish_kabiraji.jpg',
-            description: 'The Bengali evolution of the classic British coverage cutlet.'
+          description:
+            'The Bengali evolution of the classic British coverage cutlet.',
         },
         {
           id: 7,
@@ -159,7 +167,8 @@ export default {
           price: 20,
           image:
             'https://2.bp.blogspot.com/-3dom_cXpMP0/VvPb0tHfeYI/AAAAAAAAGyw/mlFwW-ZJhQkmRFV_cB_2uX8ldzEKX2V4A/s1600/easy-dum-aloo-with-yogurt4.jpg',
-            description: 'Succulent potato pieces sauteed in a rich tomato gravy.'
+          description:
+            'Succulent potato pieces sauteed in a rich tomato gravy.',
         },
       ],
     },
@@ -183,52 +192,48 @@ export default {
       menu: [
         {
           id: 1,
-          name: 'Tostada con tomate',
+          name: 'Kung Pao Chicken',
           price: 10,
           image:
-            'https://spanishsabores.com/wp-content/uploads/2017/09/Tostada.jpg',
+            'http://2.bp.blogspot.com/-PhwF7ZMrHO0/Vn6jo5K9sGI/AAAAAAAAEUs/YfUqMgaQIRY/w1200-h630-p-k-no-nu/2015-12-22%2B12.08.12.jpg',
+          description:
+            'A Chinese favorite of the West. Spicy chicken stir-fried with nuts and vegetables.',
         },
         {
           id: 2,
-          name: 'Paella con Marisco',
-          price: 12,
+          name: 'Yeung Chow Fried Rice',
+          price: 9,
           image:
-            'https://images.pexels.com/photos/4305836/pexels-photo-4305836.jpeg',
+            'https://upload.wikimedia.org/wikipedia/commons/3/38/Yeung_Chow_Fried_Rice.jpg',
+          description:
+            'A fried rice known by its unique taste. Hearty mix of chicken, shrimp, pork, eggs, and vegetables.',
         },
         {
           id: 3,
-          name: 'Pimientos de Padron',
+          name: 'Shrimp in Lobster Sauce',
           price: 10,
           image:
-            'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/panfriedpadronpeppers-600x900.jpg',
+            'http://2.bp.blogspot.com/-s0E19A8nPrI/T2AKqZoqWnI/AAAAAAAAEFg/jQmoJOHVOTw/s1600/tofu%2Bsh.JPG',
+          description:
+            'The best of crustaceans get together to make this dish happen. An unforgettable delicacy.',
         },
         {
           id: 4,
-          name: 'Pinchos Morunos',
-          price: 22,
+          name: 'Singapore Chow Mei Fun',
+          price: 14,
           image:
-            'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/spanish-pork-kebabs-for-facebook-600x314.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Singapore_style_noodles.jpg/1200px-Singapore_style_noodles.jpg',
+          description:
+            'A gorgeous mix of thin vermicelli noodles and your favorite meats and vegetables. Cooked in curry sauce to give it the distinct color and aroma.',
         },
         {
           id: 5,
-          name: 'Salmorejo',
-          price: 20,
+          name: 'Beef and Broccoli Stir-Fry',
+          price: 12,
           image:
-            'https://spanishsabores.com/wp-content/uploads/2015/04/IMG_6028.jpg',
-        },
-        {
-          id: 6,
-          name: 'Huevos Rotos',
-          price: 20,
-          image:
-            'https://spanishsabores.com/wp-content/uploads/2014/04/IMG_4364.jpg',
-        },
-        {
-          id: 1,
-          name: 'Empanadas de Tuna',
-          price: 20,
-          image:
-            'https://spanishsabores.com/wp-content/uploads/2015/06/Tuna-Empanada-Recipe-Feature.jpg',
+            'https://cloud.foodista.com/content/images/84b8bc79b3db590113fa08e8e6677bd2978394fe_607x400.jpg',
+          description:
+            'Deliciousness freshness of the broccoli mixes with the silky beef gravy to create this wonderful dish.',
         },
       ],
     },

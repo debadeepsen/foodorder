@@ -13,7 +13,7 @@ const Constants = {
     },
     H2: {
       fontSize: 20,
-      marginBottom: 4,
+      marginBottom: 2,
       color: '#d24900',
     },
     H3: {
