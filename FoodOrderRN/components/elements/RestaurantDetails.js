@@ -17,6 +17,7 @@ import {
   TouchableOpacity,
   Image,
   FlatList,
+  Linking,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import NumericInput from './NumericInput';
@@ -154,11 +155,20 @@ const RestaurantFlatList = ({restaurant}) => {
                     marginTop: 0,
                     marginBottom: 20,
                   }}>
-                  <FontAwesomeIcon
-                    icon={faPhone}
-                    style={{color: Constants.COLORS.THEME_MAIN}}
-                  />
-                  <Text style={{marginLeft: 5}}>{restaurant.phone}</Text>
+                  <TouchableOpacity
+                    style={{flexDirection: 'row'}}
+                    onPress={() => {
+                      Linking.openURL(`tel:${restaurant.phone}`);
+                    }}>
+                    <FontAwesomeIcon
+                      icon={faPhone}
+                      style={{color: Constants.COLORS.THEME_MAIN}}
+                    />
+                    <Text
+                      style={{marginLeft: 5, textDecorationLine: 'underline'}}>
+                      {restaurant.phone}
+                    </Text>
+                  </TouchableOpacity>
                 </View>
                 <View>
                   <Text style={{fontSize: 20, fontWeight: 'bold'}}>Menu</Text>

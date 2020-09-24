@@ -35,7 +35,10 @@ const RestaurantList = ({navigation}) => {
             <View style={{padding: 10}}>
               <DealsBox />
               <CategoriesScroller />
-              <Text style={Constants.STYLE.H2}>RESTAURANTS</Text>
+              <Text
+                style={[Constants.STYLE.H2, {marginTop: 10, marginBottom: -8}]}>
+                RESTAURANTS
+              </Text>
             </View>
           }
           data={restaurants}
@@ -71,12 +74,12 @@ const RestaurantBox = ({restaurant}) => {
   return (
     <View
       style={{
-        paddingLeft:10,
+        paddingLeft: 10,
         paddingBottom: 10,
         paddingTop: 10,
         borderColor: '#1111',
         borderBottomWidth: 1,
-        backgroundColor: Constants.COLORS.BACKGROUND
+        backgroundColor: Constants.COLORS.BACKGROUND,
       }}>
       <TouchableOpacity
         style={{height: 100, flexDirection: 'row'}}

@@ -12,7 +12,7 @@ export default {
         unit: 'km',
       },
       address: '17 Alphonso Avenue, Los Carros, CA 98758',
-      phone: '(408)-404-6174',
+      phone: '+1 (408)-404-6174',
       image:
         'https://spanishsabores.com/wp-content/uploads/2015/04/IMG_6028.jpg',
       type: {
@@ -90,7 +90,7 @@ export default {
         unit: 'km',
       },
       address: "259B King's Row, Justin, CA 98758",
-      phone: '(408)-404-6174',
+      phone: '+1 (408)-404-6174',
       image:
         'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg',
       type: {
@@ -114,7 +114,7 @@ export default {
           image:
             'https://upload.wikimedia.org/wikipedia/commons/e/ec/Mustard_Fish_Curry.jpg',
           description:
-            "A mustard based variety of one of Bengal's signature dishes",
+            "A mustard based variety of one of Bengal's signature dishes.",
         },
         {
           id: 8,
@@ -182,7 +182,7 @@ export default {
         unit: 'km',
       },
       address: '25 Street Number Ten, Calvin, CA 98758',
-      phone: '(408)-404-6174',
+      phone: '+1 (408)-404-6174',
       image: 'https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg',
       type: {
         id: 3,
@@ -247,7 +247,7 @@ export default {
         unit: 'km',
       },
       address: '11 Downing Street, London, CA 98758',
-      phone: '(408)-404-6174',
+      phone: '+1 (408)-404-6174',
       image:
         'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       type: {
@@ -258,52 +258,64 @@ export default {
       menu: [
         {
           id: 1,
-          name: 'Tostada con tomate',
+          name: 'Spaghetti Carbonara',
           price: 10,
           image:
-            'https://spanishsabores.com/wp-content/uploads/2017/09/Tostada.jpg',
+            'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/11/4/1/FNM_120109-W-N-Dinners-036_s4x3.jpg.rend.hgtvcom.826.620.suffix/1371589446335.jpeg',
+          description:
+            'Simplicity is the beauty of this Italian classic pasta dish.',
         },
         {
           id: 2,
-          name: 'Paella con Marisco',
+          name: 'Panzanella',
           price: 12,
           image:
-            'https://images.pexels.com/photos/4305836/pexels-photo-4305836.jpeg',
+            'https://static01.nyt.com/images/2015/07/08/dining/08APPE2/08APPE2-superJumbo.jpg',
+          description: 'A refreshing Tuscan salad, ideal for summer.',
         },
         {
           id: 3,
-          name: 'Pimientos de Padron',
+          name: 'Bruschetta',
           price: 10,
           image:
-            'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/panfriedpadronpeppers-600x900.jpg',
+            'https://cdn.pixabay.com/photo/2019/06/18/18/01/bruschetta-4282898_960_720.jpg',
+          description:
+            'The classic Italian starter - grilled bread topped with veggies, rubbed garlic and tomato mix.',
         },
         {
           id: 4,
-          name: 'Pinchos Morunos',
-          price: 22,
+          name: 'Mushroom Risotto',
+          price: 12,
           image:
-            'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/spanish-pork-kebabs-for-facebook-600x314.jpg',
+            'https://www.rhiansrecipes.com/wp-content/uploads/2018/12/IMG_0106-2.jpeg',
+          description:
+            'One cannot think of Italian cuisine without Risotto. Made with the finest quality rice and mushrooms that are sure to melt in your mouth.',
         },
         {
           id: 5,
-          name: 'Salmorejo',
+          name: 'Lasagna',
           price: 20,
-          image:
-            'https://spanishsabores.com/wp-content/uploads/2015/04/IMG_6028.jpg',
+          image: 'https://i.ytimg.com/vi/2qLwkT1F4Lc/maxresdefault.jpg',
+          description:
+            'Several layers of deliciousness topped upon one another, this dish smells of indulgence.',
         },
         {
           id: 6,
-          name: 'Huevos Rotos',
-          price: 20,
+          name: 'Pasta Bolognese',
+          price: 15,
           image:
-            'https://spanishsabores.com/wp-content/uploads/2014/04/IMG_4364.jpg',
+            'https://cdn.pixabay.com/photo/2019/10/13/14/23/spaghetti-bolognese-4546233_960_720.jpg',
+          description:
+            'Al dente pasta dripping with mouth-watering meat sauce. Another Italian dish famous all over the world.',
         },
         {
-          id: 1,
-          name: 'Empanadas de Tuna',
-          price: 20,
+          id: 7,
+          name: 'Margherita Pizza',
+          price: 14,
           image:
-            'https://spanishsabores.com/wp-content/uploads/2015/06/Tuna-Empanada-Recipe-Feature.jpg',
+            'https://cdn.pixabay.com/photo/2015/10/17/20/22/margherita-pizza-993274_960_720.jpg',
+          description:
+            'The original classic, that went on to conquer the world in various forms.',
         },
       ],
     },
@@ -317,7 +329,7 @@ export default {
         unit: 'km',
       },
       address: '117 Hanamura Road, Himari, CA 98758',
-      phone: '(408)-404-6174',
+      phone: '+1 (408)-404-6174',
       image:
         'https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       type: {
@@ -328,53 +340,44 @@ export default {
       menu: [
         {
           id: 1,
-          name: 'Tostada con tomate',
+          name: 'Oyakodon',
           price: 10,
           image:
-            'https://spanishsabores.com/wp-content/uploads/2017/09/Tostada.jpg',
+            'https://asianinspirations.com.au/wp-content/uploads/2019/04/R01996_Oyakodon.jpg',
+            description: 'A juicy, brothy mix of tender chicken and runny egg, served over rice.'
         },
         {
           id: 2,
-          name: 'Paella con Marisco',
+          name: 'Yakitori',
           price: 12,
           image:
-            'https://images.pexels.com/photos/4305836/pexels-photo-4305836.jpeg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Typical_yakitori_001.jpg/1200px-Typical_yakitori_001.jpg',
+            description: 'Japanese skewered chicken grilled over charcoal.'
         },
         {
           id: 3,
-          name: 'Pimientos de Padron',
+          name: 'Hōtō',
           price: 10,
           image:
-            'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/panfriedpadronpeppers-600x900.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/a/a0/Houtou.jpg',
+            description: 'A popular regional dish originating from Yamanashi, Japan made by stewing flat udon noodles and vegetables in miso soup.'
         },
         {
           id: 4,
-          name: 'Pinchos Morunos',
+          name: 'Teriyaki Salmon',
           price: 22,
           image:
-            'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/spanish-pork-kebabs-for-facebook-600x314.jpg',
+            'https://dinnerdiary.org/wp-content/teriyaki-salmon.JPG',
+            description: 'A salmon fillet marinated in teriyaki sauce, then grilled to perfection.'
         },
         {
           id: 5,
-          name: 'Salmorejo',
-          price: 20,
+          name: 'Omurice',
+          price: 14,
           image:
-            'https://spanishsabores.com/wp-content/uploads/2015/04/IMG_6028.jpg',
-        },
-        {
-          id: 6,
-          name: 'Huevos Rotos',
-          price: 20,
-          image:
-            'https://spanishsabores.com/wp-content/uploads/2014/04/IMG_4364.jpg',
-        },
-        {
-          id: 1,
-          name: 'Empanadas de Tuna',
-          price: 20,
-          image:
-            'https://spanishsabores.com/wp-content/uploads/2015/06/Tuna-Empanada-Recipe-Feature.jpg',
-        },
+            'https://upload.wikimedia.org/wikipedia/commons/e/e2/Omurice_by_jetalone_in_a_downtown%2C_Tokyo.jpg',
+            description: 'A dish that often finds its way onto YouTube for tableside spectacles, this is rice and eggs like you have never seen before.'
+        }
       ],
     },
   ],
