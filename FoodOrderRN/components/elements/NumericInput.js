@@ -11,18 +11,22 @@ import {
   FlatList,
 } from 'react-native';
 
-const NumericInput = () => {
+const NumericInput = ({onChange}) => {
   const [value, setValue] = useState(0);
 
   const buttonPressed = (type) => {
-    console.log(type);
+    let newVal = value;
+
     if (type == '-') {
       if (value == 0) return;
-      setValue(value - 1);
+      newVal = value - 1;
     } else {
       if (value == 100) return;
-      setValue(value + 1);
+      newVal = value + 1;
     }
+
+    onChange(newVal);
+    setValue(newVal);
   };
 
   return (
@@ -46,7 +50,7 @@ export default NumericInput;
 
 const styles = StyleSheet.create({
   button: {
-    flex: 1,
+    flex: 5,
     borderColor: '#1112',
     backgroundColor: '#3331',
     borderWidth: 1,
@@ -65,7 +69,7 @@ const styles = StyleSheet.create({
   },
 
   middleText: {
-    flex: 2,
+    flex: 7,
     textAlign: 'center',
     textAlignVertical: 'center',
     borderTopWidth: 1,

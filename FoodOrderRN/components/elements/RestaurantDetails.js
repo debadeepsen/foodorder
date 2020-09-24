@@ -187,6 +187,34 @@ const RestaurantFlatList = ({restaurant}) => {
   );
 };
 
+const VegNonveg = ({type}) => {
+  let color = type == 'V' ? '#1a1' : '#a11';
+
+  return (
+    <View
+      style={{
+        width: 16,
+        height: 16,
+        borderColor: color,
+        borderWidth: 1,
+        backgroundColor: '#fff',
+        zIndex: 20,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 4,
+        marginRight: 7,
+      }}>
+      <View
+        style={{
+          width: 10,
+          height: 10,
+          borderRadius: 10,
+          backgroundColor: color,
+        }}></View>
+    </View>
+  );
+};
+
 const MenuItemBox = ({menuItem}) => {
   return (
     <View
@@ -198,19 +226,29 @@ const MenuItemBox = ({menuItem}) => {
         borderBottomWidth: 1,
         borderBottomColor: '#1111',
         flexDirection: 'row',
+        position: 'relative',
       }}>
       <Image
-        style={{height: 110, width: 110, resizeMode: 'cover', flex: 1}}
+        style={{
+          height: 110,
+          width: 110,
+          resizeMode: 'cover',
+          flex: 1,
+          borderRadius: 3,
+        }}
         source={{uri: menuItem.image}}
       />
       <View style={{paddingLeft: 10, flex: 2}}>
-        <Text
-          style={{
-            color: Constants.COLORS.THEME_SECONDARY,
-            fontSize: 20,
-          }}>
-          {menuItem.name}
-        </Text>
+        <View style={{flexDirection: 'row', marginBottom: 2}}>
+          <VegNonveg type={menuItem.type} />
+          <Text
+            style={{
+              color: Constants.COLORS.THEME_SECONDARY,
+              fontSize: 20,
+            }}>
+            {menuItem.name}
+          </Text>
+        </View>
         <Text
           style={{
             color: '#888',
@@ -227,12 +265,17 @@ const MenuItemBox = ({menuItem}) => {
         </Text>
 
         <View style={{flexDirection: 'row', marginTop: 5}}>
-          <NumericInput />
+          <NumericInput
+            onChange={(qty) => {
+              let totalItemCost = menuItem.price * qty;
+              console.log({totalItemCost});
+            }}
+          />
           <TouchableOpacity
             style={{
               backgroundColor: Constants.COLORS.THEME_ALT,
               paddingVertical: 8,
-              marginLeft: 5,
+              marginLeft: 7,
               borderRadius: 3,
               alignItems: 'center',
               justifyContent: 'center',

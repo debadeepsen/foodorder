@@ -103,6 +103,7 @@ export default {
           id: 1,
           name: 'Murgir Jhol',
           price: 15,
+          type:'N',
           image:
             'https://cdn.pixabay.com/photo/2019/08/12/09/50/chicken-curry-4400848_960_720.jpg',
           description: 'A rich tomato-based gravy with juicy chicken pieces.',
@@ -111,6 +112,7 @@ export default {
           id: 2,
           name: 'Mustard Fish Curry',
           price: 17,
+          type:'N',
           image:
             'https://upload.wikimedia.org/wikipedia/commons/e/ec/Mustard_Fish_Curry.jpg',
           description:
@@ -120,6 +122,7 @@ export default {
           id: 8,
           name: 'Mutton (Goat) Kosha',
           price: 20,
+          type:'N',
           image:
             'https://uploads-ssl.webflow.com/5c481361c604e53624138c2f/5c5784dd46836abe97e82a07_kosha-mangsho-website-thumbnail-_p4nuue.png',
           description:
@@ -129,6 +132,7 @@ export default {
           id: 3,
           name: 'Mutton (Goat) Biryani',
           price: 20,
+          type:'N',
           image:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Kolkata_Biryani.jpg/1024px-Kolkata_Biryani.jpg',
           description:
@@ -138,6 +142,7 @@ export default {
           id: 4,
           name: 'Bhetki Paturi',
           price: 22,
+          type:'N',
           image:
             'https://i1.wp.com/kitchenofdebjani.com/wp-content/uploads/2018/01/Bhetki-Macher-Paturi-3.jpg',
           description:
@@ -147,6 +152,7 @@ export default {
           id: 5,
           name: 'Singara/Samosa',
           price: 10,
+          type:'V',
           image:
             'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg',
           description:
@@ -156,6 +162,7 @@ export default {
           id: 6,
           name: 'Fish Kabiraji',
           price: 20,
+          type:'N',
           image:
             'http://i0.wp.com/saffronstreaks.com/wp-content/uploads/2010/04/ss_fish_kabiraji.jpg',
           description:
@@ -165,6 +172,7 @@ export default {
           id: 7,
           name: 'Alur Dom',
           price: 20,
+          type:'V',
           image:
             'https://2.bp.blogspot.com/-3dom_cXpMP0/VvPb0tHfeYI/AAAAAAAAGyw/mlFwW-ZJhQkmRFV_cB_2uX8ldzEKX2V4A/s1600/easy-dum-aloo-with-yogurt4.jpg',
           description:
