@@ -1,6 +1,6 @@
-import {faBars, faHome} from '@fortawesome/free-solid-svg-icons';
+import {faBars, faHome, faLuggageCart, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {
   SafeAreaView,
@@ -16,7 +16,6 @@ import Constants from '../../assets/js/constants';
 import * as RootNavigation from '../../RootNavigation';
 
 const HeaderComp = () => {
-  
   const navigation = useNavigation();
 
   return (
@@ -45,7 +44,22 @@ const HeaderComp = () => {
         </View>
       </View>
 
-      <View style={{marginLeft: 10, flex: 1}}>
+      <View style={{marginLeft: 10, flex: 1, flexDirection: 'row'}}>
+        <TouchableOpacity
+          onPress={() => {
+            console.log('navigation.toggleDrawer();');
+            navigation.toggleDrawer();
+          }}>
+          <FontAwesomeIcon
+            icon={faShoppingCart}
+            size={28}
+            v
+            style={{
+              alignSelf: 'flex-end',
+              marginRight: 15,
+            }}
+          />
+        </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
             console.log('navigation.toggleDrawer();');
