@@ -41,18 +41,9 @@ const Tab = createBottomTabNavigator();
 
 const HomeMain = () => {
   return (
-    <ScrollView
-      style={{
-        backgroundColor: Constants.COLORS.BACKGROUND,
-        height: '100%',
-        padding: 10,
-      }}>
-      <DealsBox />
-      <CategoriesScroller />
-      <View>
-        <RestaurantList />
-      </View>
-    </ScrollView>
+    <View>
+      <RestaurantList />
+    </View>
   );
 };
 

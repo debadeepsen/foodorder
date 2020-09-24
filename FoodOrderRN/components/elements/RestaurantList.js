@@ -18,6 +18,8 @@ import Constants from '../../assets/js/constants';
 
 import Restaurants from '../../assets/json/restaurants';
 import {navigate} from '../../RootNavigation';
+import CategoriesScroller from './CategoriesScroller';
+import DealsBox from './DealsBox';
 
 const RestaurantList = ({navigation}) => {
   const [restaurants, setRestaurants] = useState([]);
@@ -26,11 +28,16 @@ const RestaurantList = ({navigation}) => {
   }, []);
 
   return (
-    <View style={Constants.STYLE.MTOP}>
-      <Text style={Constants.STYLE.H2}>RESTAURANTS</Text>
-
+    <View>
       <SafeAreaView>
         <FlatList
+          ListHeaderComponent={
+            <View style={{padding: 10}}>
+              <DealsBox />
+              <CategoriesScroller />
+              <Text style={Constants.STYLE.H2}>RESTAURANTS</Text>
+            </View>
+          }
           data={restaurants}
           renderItem={({item}) => {
             return <RestaurantBox restaurant={item} />;
@@ -64,10 +71,12 @@ const RestaurantBox = ({restaurant}) => {
   return (
     <View
       style={{
-        paddingBottom: 7,
-        marginTop: 7,
+        paddingLeft:10,
+        paddingBottom: 10,
+        paddingTop: 10,
         borderColor: '#1111',
         borderBottomWidth: 1,
+        backgroundColor: Constants.COLORS.BACKGROUND
       }}>
       <TouchableOpacity
         style={{height: 100, flexDirection: 'row'}}
