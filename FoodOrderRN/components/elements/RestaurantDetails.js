@@ -1,4 +1,10 @@
-import {faStar} from '@fortawesome/free-solid-svg-icons';
+import {
+  faAddressBook,
+  faAddressCard,
+  faCartPlus,
+  faPhone,
+  faStar,
+} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import React, {useEffect, useState} from 'react';
 import {
@@ -13,7 +19,7 @@ import {
   FlatList,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import NumericInput from 'react-native-numeric-input';
+import NumericInput from './NumericInput';
 
 import Constants from '../../assets/js/constants';
 
@@ -21,6 +27,16 @@ import Restaurants from '../../assets/json/restaurants';
 
 const RestaurantDetails = ({route, navigation}) => {
   const {restaurant} = route.params;
+
+  //rating
+  var activeStars = '',
+    inactiveStars = '';
+  for (let i = 0; i < restaurant.rating; i++) {
+    activeStars += Constants.STAR_SYMBOL;
+  }
+  for (let i = 0; i < 5 - restaurant.rating; i++) {
+    inactiveStars += Constants.STAR_SYMBOL;
+  }
 
   return (
     <ScrollView>
@@ -33,49 +49,78 @@ const RestaurantDetails = ({route, navigation}) => {
           borderColor: '#3334',
         }}
       />
-      {/* <LinearGradient
-        colors={['#6662', '#0000']}
-        style={{
-          height: 60,
-          marginTop:2,
-          padding:10
-        }}> */}
-      {/* </LinearGradient> */}
-      <View style={{borderTopColor: '#1112', borderTopWidth: 2}}></View>
-      {/* <View
-        style={{
-          borderTopColor: Constants.COLORS.THEME_SECONDARY,
-          borderTopWidth: 2,
-          marginTop: 2,
-        }}></View>
-      <View
-        style={{
-          borderTopColor: Constants.COLORS.THEME_MAIN,
-          borderTopWidth: 3,
-          marginTop: 2,
-        }}></View> */}
-      <View style={{padding: 10}}>
-        <Text
+      <View style={{position: 'relative'}}>
+        <LinearGradient
+          colors={['#0000', '#0007']}
           style={{
-            color: Constants.COLORS.THEME_SECONDARY,
-            fontSize: 36,
-            marginBottom: 20,
+            height: 80,
+            width: '100%',
+            marginTop: 2,
+            padding: 8,
+            position: 'absolute',
+            bottom: 0,
+            justifyContent: 'flex-end',
           }}>
-          {restaurant.name}
-        </Text>
+          <Text
+            style={{
+              color: '#fff',
+              fontSize: 36,
+              marginBottom: 0,
+            }}>
+            {restaurant.name}
+          </Text>
+        </LinearGradient>
         <Text
           style={{
             color: '#888',
-            fontSize: 20,
+            fontSize: 18,
+            position: 'absolute',
+            top: -200,
+            right: 0,
+            margin: 0,
+            borderBottomLeftRadius: 10,
+            borderColor: '#7774',
+            borderWidth: 1,
+            borderTopWidth: 0,
+            borderRightWidth: 0,
+            padding: 10,
+            backgroundColor: '#fff',
+            elevation: 5,
           }}>
           {restaurant.type.flag} &nbsp;
           {restaurant.type.name}
         </Text>
-        <Text style={{marginTop: 10, marginBottom: 20}}>
-          221A/C, Baker Street, Apartment B, London, AB, 12345.
-        </Text>
+      </View>
 
-        <SafeAreaView>
+      <View style={{borderTopColor: '#1116', borderTopWidth: 1}}></View>
+      <View style={{borderTopColor: '#1114', borderTopWidth: 1}}></View>
+      <View style={{borderTopColor: '#1112', borderTopWidth: 1}}></View>
+      <View style={{borderTopColor: '#1111', borderTopWidth: 1}}></View>
+
+      <View style={{padding: 10}}>
+        <View style={{flexDirection: 'row', marginTop: 0}}>
+          <Text style={{color: Constants.COLORS.THEME_MAIN, fontSize: 18}}>
+            {activeStars}
+          </Text>
+          <Text style={{color: '#aaa', fontSize: 18}}>{inactiveStars}</Text>
+        </View>
+        <View style={{flexDirection: 'row', marginTop: 10, marginBottom: 8}}>
+          <FontAwesomeIcon
+            icon={faAddressCard}
+            style={{color: Constants.COLORS.THEME_MAIN}}
+          />
+          <Text style={{marginLeft: 5}}>{restaurant.address}</Text>
+        </View>
+        <View style={{flexDirection: 'row', marginTop: 0, marginBottom: 20}}>
+          <FontAwesomeIcon
+            icon={faPhone}
+            style={{color: Constants.COLORS.THEME_MAIN}}
+          />
+          <Text style={{marginLeft: 5}}>{restaurant.phone}</Text>
+        </View>
+
+        <SafeAreaView
+          style={{borderWidth: 1, borderColor: '#4441', elevation: 1}}>
           <FlatList
             data={restaurant.menu}
             renderItem={({item}) => {
@@ -100,7 +145,7 @@ const MenuItemBox = ({menuItem}) => {
         marginBottom: 0,
         padding: 10,
         borderBottomWidth: 1,
-        borderBottomColor: '#2222',
+        borderBottomColor: '#1111',
         flexDirection: 'row',
       }}>
       <Image
@@ -110,7 +155,7 @@ const MenuItemBox = ({menuItem}) => {
       <View style={{paddingLeft: 10, flex: 2}}>
         <Text
           style={{
-            color: Constants.COLORS.THEME_TERTIARY,
+            color: Constants.COLORS.THEME_SECONDARY,
             fontSize: 20,
           }}>
           {menuItem.name}
@@ -130,20 +175,23 @@ const MenuItemBox = ({menuItem}) => {
           {menuItem.price}
         </Text>
 
-        <NumericInput type="up-down" onChange={(value) => console.log(value)} />
-        <TouchableOpacity
-          style={{
-            backgroundColor: Constants.COLORS.THEME_ALT,
-            marginTop: 10,
-            padding: 3,
-            borderRadius: 3,
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'row',
-          }}>
-          <Text style={{color: '#fff'}}>Add </Text>
-          <Text style={{color: '#fff', fontSize: 24}}>+</Text>
-        </TouchableOpacity>
+        <View style={{flexDirection: 'row', marginTop: 5}}>
+          <NumericInput />
+          <TouchableOpacity
+            style={{
+              backgroundColor: Constants.COLORS.THEME_ALT,
+              paddingVertical: 8,
+              marginLeft: 5,
+              borderRadius: 3,
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'row',
+              flex: 1,
+            }}>
+            <Text style={{color: '#fff'}}>Add </Text>
+            <FontAwesomeIcon icon={faCartPlus} style={{color: '#fff'}} />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );

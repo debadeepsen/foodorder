@@ -62,11 +62,20 @@ const RestaurantBox = ({restaurant}) => {
   }
 
   return (
-    <View style={{marginBottom: 12, marginTop: 4}}>
+    <View
+      style={{
+        paddingBottom: 7,
+        marginTop: 7,
+        borderColor: '#1111',
+        borderBottomWidth: 1,
+      }}>
       <TouchableOpacity
         style={{height: 100, flexDirection: 'row'}}
         onPress={() => {
-          navigation.navigate('RestaurantDetails', {restaurant:restaurant, id:1234});
+          navigation.navigate('RestaurantDetails', {
+            restaurant: restaurant,
+            id: 1234,
+          });
         }}>
         <View style={{flex: 1}}>
           <Image

@@ -9,12 +9,14 @@ export default {
         value: 1,
         unit: 'km',
       },
+      address: '17 Alphonso Avenue, Los Carros, CA 98758',
+      phone: '(408)-404-6174',
       image:
-        'https://spanishsabores.com/wp-content/uploads/2017/09/Tostada.jpg',
+        'https://spanishsabores.com/wp-content/uploads/2015/04/IMG_6028.jpg',
       type: {
         id: 1,
         name: 'Spanish',
-        flag: '🇪🇸'
+        flag: '🇪🇸',
       },
       menu: [
         {
@@ -23,7 +25,8 @@ export default {
           price: 10,
           image:
             'https://spanishsabores.com/wp-content/uploads/2017/09/Tostada.jpg',
-            description: 'Toasts with tomato. A reminder that a good breakfast can be simple.'
+          description:
+            'Toasts with tomato. A reminder that a good breakfast can be simple.',
         },
         {
           id: 2,
@@ -31,7 +34,7 @@ export default {
           price: 12,
           image:
             'https://images.pexels.com/photos/4305836/pexels-photo-4305836.jpeg',
-            description: 'Succulent rice cooked with saffron and seafoods.'
+          description: 'Succulent rice cooked with saffron and seafoods.',
         },
         {
           id: 3,
@@ -39,7 +42,7 @@ export default {
           price: 10,
           image:
             'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/panfriedpadronpeppers-600x900.jpg',
-            description: 'Just peppers. Nothing else.'
+          description: 'Just peppers. Nothing else.',
         },
         {
           id: 4,
@@ -47,7 +50,7 @@ export default {
           price: 22,
           image:
             'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/spanish-pork-kebabs-for-facebook-600x314.jpg',
-            description: 'Delicious grilled pork, the Spanish variety.'
+          description: 'Delicious grilled pork, the Spanish variety.',
         },
         {
           id: 5,
@@ -55,7 +58,7 @@ export default {
           price: 20,
           image:
             'https://spanishsabores.com/wp-content/uploads/2015/04/IMG_6028.jpg',
-            description: 'A rich, creamy Spanish tomato soup.'
+          description: 'A rich, creamy Spanish tomato soup.',
         },
         {
           id: 6,
@@ -63,7 +66,7 @@ export default {
           price: 20,
           image:
             'https://spanishsabores.com/wp-content/uploads/2014/04/IMG_4364.jpg',
-            description: 'A delectable concoction of eggs and meat.'
+          description: 'A delectable concoction of eggs and meat.',
         },
         {
           id: 7,
@@ -71,7 +74,7 @@ export default {
           price: 20,
           image:
             'https://spanishsabores.com/wp-content/uploads/2015/06/Tuna-Empanada-Recipe-Feature.jpg',
-            description: 'Empanadas with a twist.'
+          description: 'Empanadas with a twist.',
         },
       ],
     },
@@ -84,62 +87,79 @@ export default {
         value: 6,
         unit: 'km',
       },
+      address: '259B King\'s Row, Justin, CA 98758',
+      phone: '(408)-404-6174',
       image:
         'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg',
       type: {
         id: 1,
         name: 'Bengali/Indian',
-        flag: '🇮🇳'
+        flag: '🇮🇳',
       },
       menu: [
         {
           id: 1,
-          name: 'Tostada con tomate',
-          price: 10,
+          name: 'Murgir Jhol',
+          price: 15,
           image:
-            'https://spanishsabores.com/wp-content/uploads/2017/09/Tostada.jpg',
+            'https://cdn.pixabay.com/photo/2019/08/12/09/50/chicken-curry-4400848_960_720.jpg',
+            description: 'A rich tomato-based gravy with juicy chicken pieces.'
         },
         {
           id: 2,
-          name: 'Paella con Marisco',
-          price: 12,
+          name: 'Mustard Fish Curry',
+          price: 17,
           image:
-            'https://images.pexels.com/photos/4305836/pexels-photo-4305836.jpeg',
+            'https://upload.wikimedia.org/wikipedia/commons/e/ec/Mustard_Fish_Curry.jpg',
+            description:'A mustard based variety of one of Bengal\'s signature dishes'
+        },
+        {
+          id: 8,
+          name: 'Mutton (Goat) Kosha',
+          price: 20,
+          image:
+            'https://uploads-ssl.webflow.com/5c481361c604e53624138c2f/5c5784dd46836abe97e82a07_kosha-mangsho-website-thumbnail-_p4nuue.png',
+            description: 'Pieces of meat seared and braised on low heat until they are tender enough to fall off the bones.'
         },
         {
           id: 3,
-          name: 'Pimientos de Padron',
-          price: 10,
+          name: 'Mutton (Goat) Biryani',
+          price: 20,
           image:
-            'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/panfriedpadronpeppers-600x900.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Kolkata_Biryani.jpg/1024px-Kolkata_Biryani.jpg',
+            description: 'A slow-cooked casserole of meat and rice. This is a special Bengali variety of the dish considered a delicacy all over India.'
         },
         {
           id: 4,
-          name: 'Pinchos Morunos',
+          name: 'Bhetki Paturi',
           price: 22,
           image:
-            'https://i2.wp.com/www.wildjunket.com/wp-content/uploads/2020/04/spanish-pork-kebabs-for-facebook-600x314.jpg',
+            'https://i1.wp.com/kitchenofdebjani.com/wp-content/uploads/2018/01/Bhetki-Macher-Paturi-3.jpg',
+            description: 'Tender Bhetki fish fillets marinated with spices and steamed in a banana leaf envelope. Healthy with a dash of indulgence.'
         },
         {
           id: 5,
-          name: 'Salmorejo',
-          price: 20,
+          name: 'Singara/Samosa',
+          price: 10,
           image:
-            'https://spanishsabores.com/wp-content/uploads/2015/04/IMG_6028.jpg',
+            'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg',
+            description: 'A deep fried pastry pocket containing delicious spicy vegetables.'
         },
         {
           id: 6,
-          name: 'Huevos Rotos',
+          name: 'Fish Kabiraji',
           price: 20,
           image:
-            'https://spanishsabores.com/wp-content/uploads/2014/04/IMG_4364.jpg',
+            'http://i0.wp.com/saffronstreaks.com/wp-content/uploads/2010/04/ss_fish_kabiraji.jpg',
+            description: 'The Bengali evolution of the classic British coverage cutlet.'
         },
         {
-          id: 1,
-          name: 'Empanadas de Tuna',
+          id: 7,
+          name: 'Alur Dom',
           price: 20,
           image:
-            'https://spanishsabores.com/wp-content/uploads/2015/06/Tuna-Empanada-Recipe-Feature.jpg',
+            'https://2.bp.blogspot.com/-3dom_cXpMP0/VvPb0tHfeYI/AAAAAAAAGyw/mlFwW-ZJhQkmRFV_cB_2uX8ldzEKX2V4A/s1600/easy-dum-aloo-with-yogurt4.jpg',
+            description: 'Succulent potato pieces sauteed in a rich tomato gravy.'
         },
       ],
     },
@@ -152,11 +172,13 @@ export default {
         value: 14,
         unit: 'km',
       },
+      address: '25 Street Number Ten, Calvin, CA 98758',
+      phone: '(408)-404-6174',
       image: 'https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg',
       type: {
         id: 3,
         name: 'Chinese',
-        flag: '🇨🇳'
+        flag: '🇨🇳',
       },
       menu: [
         {
@@ -219,12 +241,14 @@ export default {
         value: 2,
         unit: 'km',
       },
+      address: '11 Downing Street, London, CA 98758',
+      phone: '(408)-404-6174',
       image:
         'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       type: {
         id: 4,
         name: 'Italian',
-        flag: '🇮🇹'
+        flag: '🇮🇹',
       },
       menu: [
         {
@@ -287,12 +311,14 @@ export default {
         value: 5,
         unit: 'km',
       },
+      address: '117 Hanamura Road, Himari, CA 98758',
+      phone: '(408)-404-6174',
       image:
         'https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       type: {
         id: 5,
         name: 'Sushi/japanese',
-        flag: '🇯🇵'
+        flag: '🇯🇵',
       },
       menu: [
         {

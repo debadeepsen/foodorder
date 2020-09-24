@@ -4,7 +4,8 @@ const Constants = {
     THEME_MAIN: '#f2661b',
     THEME_SECONDARY: '#d24900',
     THEME_TERTIARY: '#aa2700',
-    THEME_ALT: '#59ca12'
+    THEME_ALT: '#59ca12',
+    THEME_GREY: '#787878',
   },
   STYLE: {
     MTOP: {
@@ -17,13 +18,13 @@ const Constants = {
     },
     H3: {
       fontSize: 18,
-      fontWeight: "bold",
+      fontWeight: 'bold',
       marginBottom: 2,
       color: '#999',
     },
   },
   CURRENCY_SIGN: '$',
-  STAR_SYMBOL: '✸'
+  STAR_SYMBOL: '✸',
 };
 
 export default Constants;
