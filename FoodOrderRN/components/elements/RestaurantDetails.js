@@ -193,22 +193,22 @@ const VegNonveg = ({type}) => {
   return (
     <View
       style={{
-        width: 16,
-        height: 16,
+        width: 14,
+        height: 14,
         borderColor: color,
         borderWidth: 1,
         backgroundColor: '#fff',
         zIndex: 20,
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 4,
+        marginTop: 5,
         marginRight: 7,
       }}>
       <View
         style={{
-          width: 10,
-          height: 10,
-          borderRadius: 10,
+          width: 8,
+          height: 8,
+          borderRadius: 8,
           backgroundColor: color,
         }}></View>
     </View>
